@@ -1,3 +1,27 @@
+// Template Literals
+// sử dụng dấu (``) thay vì dấu ("")
+let greeting = `Hello world`
+console.log(greeting)
+// sử dụng cả dấu (``) và dấu ("")
+let greeting2 = `"Hello world"`
+console.log(greeting2)
+
+// Interpolation trong JavaScript là quá trình chèn biểu thức vào chuỗi, có thể được thực hiện bằng cách sử dụng dấu ngoặc nhọn ({}) và dấu đô la ($).
+// Variable Substitution chèn giá trị vào 1 biến trong chuỗi
+let firstName = "Lữ"
+console.log("First name: " + firstName)
+let middleName = "Thị Thúy"
+console.log("MiddleName: " + middleName)
+let lastName = "Quỳnh"
+console.log("LastName: " + lastName)
+let fullName = `${firstName} ${middleName} ${lastName}`
+console.log("Full name (first name + middleName + lastName): " + fullName)
+// Expression substitution chèn biểu thức vào chuỗi, thường dùng để chèn các giá trị tính toán
+const a = 10
+const b = 20
+console.log(`Tổng của ${a} và ${b} là ${a+b}`)
+
+
 let num = 12345678910
 // toString() để ép chuỗi
 let text = num.toString();
@@ -5,12 +29,36 @@ console.log("\n[Text: " +  text + "]")
 
 
 // indexOf() tìm kiếm chuỗi trong chuỗi (trả về vị trí đầu tiên tìm được)
-let indexOf = text.indexOf("1234")
+let indexOf = text.indexOf("1")
 console.log("indexOf: " + indexOf)
 // lastIndexOf() tìm kiếm chuỗi trong chuỗi (trả về vị trí sau cùng tìm được)
-let lastIndexOf = text.lastIndexOf("1234")
+let lastIndexOf = text.lastIndexOf("1")
 console.log("lastIndexOf: " + lastIndexOf)
- 
+// indexOf() và lastIndexOf() có thể nhập thêm giá trị thứ 2 để xác định vị trí bắt đầu tìm kiếm
+let indexOf2 = text.indexOf("1", 5)
+console.log("indexOf2: " + indexOf2)
+let lastIndexOf2 = text.lastIndexOf("1", 5)
+console.log("lastIndexOf2: " + lastIndexOf2)
+
+
+// search() tìm kiếm chuỗi trong chuỗi (trả về vị trí đầu tiên tìm được)
+let search = text.indexOf("1")
+console.log("search: " + search)
+// search() không nhận giá trị thứ 2 như index() => index() là bản nâng cấp của search() 
+
+
+// includes() trả về true nếu chuỗi chứa giá trị chỉ định, ngược lại trả về false
+console.log(`Check include "1": ` + text.includes("1"))
+console.log(`Check include "A": ` + text.includes("A"))
+// Nhập thêm giá trị thứ hai để chỉ định vị trí bắt đầu tìm kiếm
+console.log(`Check include "1" start from 3: ` + text.includes("1", 3))
+// startsWith() trả về true nếu chuỗi bắt đầu với giá trị chỉ định, ngược lại trả về false
+console.log(`Check start with "1": ` +  text.startsWith("1"))
+console.log(`Check start with "2": ` +  text.startsWith("2"))
+// endsWith() trả về true nếu chuỗi kết thúc với giá trị chỉ định, ngược lại trả về false
+console.log(`Check end with "0": ` +  text.endsWith("0")) 
+console.log(`Check end with "2": ` +  text.endsWith("2")) 
+
 
 // .length - Hàm đếm độ dài chuỗi
 let length = text.length;
@@ -35,11 +83,11 @@ console.log("slice(-6, -3): " + slice4)
 // .subString - Hàm cắt chuỗi
 // Tương tự với .slice() nhưng không nhận giá trị âm
 let subString1 = text.substring(6)
-console.log("substring(6): " + subString1)
+console.log("subString(6): " + subString1)
 let subString2 = text.substring(5,7) 
 console.log("subString(5,7): " + subString2)
 let subString3 = text.substring(-6)
-console.log("substring(-6): " + subString3 + " - WRONG")
+console.log("subString(-6): " + subString3 + " - WRONG")
 
 
 // .substr - Hàm cắt chuỗi

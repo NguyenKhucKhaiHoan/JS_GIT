@@ -22,3 +22,24 @@ number = 13
 // Hiển thị lại number mới
 console.log("[var] number mới: " + number)
 // Biến có thể thay đổi, còn hằng thì không
+
+// var vs let
+// Phạm vi của biến sử dụng var là phạm vi hàm hoặc bên ngoài hàm, toàn cục.
+// Phạm vi của biến sử dụng let là phạm vi một khối (block), xác định bởi cặp {}.
+function useLet() {
+    console.log(j); // ReferenceError: j is not defined
+    for (let j = 0; j < 3; j++) {
+      console.log("j inside ", j); // 0, 1, 2
+    }
+    console.log("j outside ", j); // ReferenceError: j is not defined
+}
+useLet();
+
+function useVar() {
+    console.log(i); // undefined
+    for (var i = 0; i < 3; i++) {
+      console.log("i inside", i); // 0, 1, 2
+    }
+    console.log("i outside", i); // 3
+    }
+useVar();

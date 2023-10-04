@@ -17,12 +17,12 @@ if (age => 18) {
 // if else
 console.log("\n[If Else]");
 if (age => 18) {
-    if (age < 23){
+    if (age < 23) {
         console.log("Là sinh viên");
     } else {
         console.log("Là người đi làm");
     }
-    
+
 } else {
     console.log("Là học sinh")
 }
@@ -32,8 +32,27 @@ if (age => 18) {
 console.log("\n[Else If]");
 if (age < 18) {
     console.log("Là học sinh")
-} else if (age < 23){
+} else if (age < 23) {
     console.log("là sinh viên")
 } else {
     console.log("Là người đi làm")
+}
+
+
+// switch case
+console.log("\n[Switch case]");
+let name = "Trân"
+switch (name) {
+    case "Hoàn":
+        console.log("Nguyễn Khúc Khải Hoàn")
+        break
+    case "Trân":
+        console.log("Võ Huyền Trân")
+        break
+    case "Quỳnh":
+        console.log("Lữ Thị Thúy Quỳnh")
+        break
+    case "Huy":
+        console.log("Võ Đoàn Gia Huy")
+        break
 }

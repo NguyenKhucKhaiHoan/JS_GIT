@@ -7,6 +7,7 @@ let greeting2 = `"Hello world"`
 console.log(greeting2)
 
 // Interpolation trong JavaScript là quá trình chèn biểu thức vào chuỗi, có thể được thực hiện bằng cách sử dụng dấu ngoặc nhọn ({}) và dấu đô la ($).
+// $ thường được dùng như phím tắt cho hàm document.getElementById()
 // Variable Substitution chèn giá trị vào 1 biến trong chuỗi
 let firstName = "Lữ"
 console.log("First name: " + firstName)

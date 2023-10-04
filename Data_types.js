@@ -50,21 +50,6 @@ console.log(`type of o is ${typeof o}`)
 let p = Symbol("id");
 console.log(`type of p is ${typeof p}`)
 
-// 2. Object
-
-// Cố định kiểu dữ liệu và không cho ép kiểu
-
-
-
-
-
-// Object.freeze()
-// let demo = 1234
-// console.log(typeof(demo))
-// Object.freeze(demo)
-// demo.toString()
-// console.log(typeof(demo))
-
 
 // Ép kiểu:
 // 1. Converting Strings to Numbers 
